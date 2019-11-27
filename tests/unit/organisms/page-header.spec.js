@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import PageHeader from '@/components/molecules/PageHeader'
+import PageHeader from '@/components/organisms/PageHeader'
 import VolantyLogo from '@/components/atoms/VolantyLogo'
 
 describe('PageHeader.vue', () => {
