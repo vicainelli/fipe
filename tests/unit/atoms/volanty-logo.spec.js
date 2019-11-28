@@ -2,7 +2,7 @@ import { shallowMount } from '@vue/test-utils'
 import VolantyLogo from '@/components/atoms/VolantyLogo'
 
 const data = {
-  src: './assets/logo.svg',
+  src: '@/assets/images/logo.svg',
   alt: 'Logo Volanty'
 }
 
