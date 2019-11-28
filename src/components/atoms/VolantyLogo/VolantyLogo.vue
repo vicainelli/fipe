@@ -1,3 +1,3 @@
 <template>
-  <img src="./assets/logo.svg" alt="Logo Volanty" />
+  <img src="@/assets/images/logo.svg" alt="Logo Volanty" />
 </template>
