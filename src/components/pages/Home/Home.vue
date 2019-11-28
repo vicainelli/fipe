@@ -1,7 +1,5 @@
 <template>
-  <BaseTemplate>
-
-  </BaseTemplate>
+  <BaseTemplate title="Quanto vale meu carro?"></BaseTemplate>
 </template>
 
 <script>
