@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="brands.length >= 1">
+    <div class="mb-3" v-if="brands.length >= 1">
       <label class="text-gray-600 text-sm font-semibold tracking-wide uppercase" for>Marca</label>
       <select @change="getVehicles($event)" class="form-select w-full mt-1" name="brand" id="brand">
         <option selected value="0" disabled>Selecione</option>
@@ -8,7 +8,7 @@
       </select>
     </div>
 
-    <div v-if="vehicles.length >= 1">
+    <div class="mb-3" v-if="vehicles.length >= 1">
       <label class="text-gray-600 text-sm font-semibold tracking-wide uppercase" for>Veículo</label>
       <select
         :disabled="vehicles.length == 0"
@@ -22,7 +22,7 @@
       </select>
     </div>
 
-    <div v-if="models.length >= 1">
+    <div class="mb-3" v-if="models.length >= 1">
       <label class="text-gray-600 text-sm font-semibold tracking-wide uppercase" for>Modelo</label>
       <select
         :disabled="models.length == 0"
