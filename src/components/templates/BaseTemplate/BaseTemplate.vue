@@ -1,7 +1,7 @@
 <template>
   <div>
     <PageHeader />
-    <div>
+    <div class="mx-auto max-w-2xl px-3">
       <h1>{{ title }}</h1>
       <slot></slot>
     </div>

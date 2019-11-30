@@ -11,8 +11,8 @@ describe('CardVehicle.vue', () => {
       propsData: { data }
     })
 
-    let title = wrapper.find('h2')
-    expect(title.text()).toBe(data.name)
+  let title = wrapper.find('h2')
+  expect(title.text()).toBe(data.name)
   })
   it('has a price data', () => {
     const wrapper = shallowMount(CardVehicle, {
