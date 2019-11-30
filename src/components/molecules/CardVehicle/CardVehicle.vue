@@ -3,18 +3,21 @@
     <div>
       <span class="text-sm uppercase font-light tracking-wider text-gray-800">{{ data.marca }}</span>
     </div>
-    <h2 class="font-bold text-gray-800 tracking-wide text-gray-600">{{ data.name }}</h2>
-    <div class="my-3">
-      <ul class="list flex">
-        <li class="mr-2" v-if="data.ano_modelo">
-          <span class="bg-blue-500 text-white p-1 rounded text-xs uppercase tracking-wide">{{ data.ano_modelo }}</span>
+    <h2 class="font-bold text-gray-800 tracking-wide text-gray-600 mt-1">{{ data.name }}</h2>
+    <div class="my-2">
+      <ul class="list flex items-center">
+        <li class="mr-3" v-if="data.ano_modelo">
+          <span class="text-gray-600">{{ data.ano_modelo }}</span>
         </li>
-        <li class="mr-2" v-if="data.combustivel">
-          <span class="bg-blue-500 text-white p-1 rounded text-xs uppercase tracking-wide">{{ data.combustivel }}</span>
+        <li>
+          <div class="w-px h-4 bg-gray-600"></div>
+        </li>
+        <li class="ml-3" v-if="data.combustivel">
+          <span class="text-gray-600">{{ data.combustivel }}</span>
         </li>
       </ul>
     </div>
-    <span class="text-xl">
+    <span class="text-lg text-volanty-500">
       <strong>{{ data.preco }}</strong>
     </span>
   </div>
