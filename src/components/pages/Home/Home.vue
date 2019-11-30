@@ -1,5 +1,5 @@
 <template>
-  <BaseTemplate title="Quanto vale meu carro?">
+  <BaseTemplate title="Quanto vale meu carro? 🤔">
     <FormCalculateVehiclePrice />
   </BaseTemplate>
 </template>

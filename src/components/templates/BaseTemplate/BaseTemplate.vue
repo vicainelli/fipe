@@ -1,8 +1,8 @@
 <template>
   <div>
     <PageHeader />
-    <div class="mx-auto max-w-2xl px-3">
-      <h1 class="text-center text-2xl mb-4">{{ title }}</h1>
+    <div class="mx-auto max-w-lg px-3">
+      <h1 class="text-center text-2xl mb-4 text-gray-700">{{ title }}</h1>
       <slot></slot>
     </div>
   </div>
