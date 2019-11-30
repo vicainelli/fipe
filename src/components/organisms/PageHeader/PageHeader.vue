@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-volanty-600 py-2 px-3 mb-6">
     <VolantyLogo />
   </div>
 </template>

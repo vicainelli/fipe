@@ -27,15 +27,3 @@ export default {
   }
 }
 </script>
-
-// ano_modelo:"2013"
-// combustivel:"Gasolina"
-// fipe_codigo:"009159-6"
-// id:"2013"
-// key:"118ia-2013"
-// marca:"BMW"
-// name:"118iA/ Urban/Sport 1.6 TB 16V 170cv 5p"
-// preco:"R$ 65.520,00"
-// referencia:"novembro de 2019"
-// time:0.01999999999998181
-// veiculo:"118iA/ Urban/Sport 1.6 TB 16V 170cv 5p"
