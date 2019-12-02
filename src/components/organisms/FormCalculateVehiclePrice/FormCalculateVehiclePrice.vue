@@ -36,23 +36,30 @@
       </select>
     </div>
     <Loading v-if="loading" />
+    <FlashMessage message-type="error" v-if="error">
+      Não foi possível completar sua requisão agora. <br />
+      Tente novamente mais tarde
+    </FlashMessage>
     <CardVehicle class="mt-8" v-if="vehicleData" :data="vehicleData" />
   </div>
 </template>
 
 <script>
 import axios from 'axios'
+import FlashMessage from '@/components/molecules/FlashMessage'
 import CardVehicle from '@/components/molecules/CardVehicle'
 import Loading from '@/components/atoms/Loading'
 export default {
   name: 'form-calculate-vehicle-price',
   components: {
+    FlashMessage,
     CardVehicle,
     Loading
   },
   data: function() {
     return {
       loading: false,
+      error: false,
       vehicleId: 0,
       modelId: 0,
       brands: [],
@@ -67,21 +74,33 @@ export default {
   methods: {
     getBrands: function() {
       this.loading = true
-      axios.get('https://fipeapi.appspot.com/api/1/carros/marcas.json').then(res => {
-        this.brands = res.data
-        this.loading = false
-      })
+      axios
+        .get('https://fipeapi.appspot.com/api/1/carros/marcas.json')
+        .then(res => {
+          this.brands = res.data
+          this.loading = false
+        })
+        .catch(() => {
+          this.error = true
+          this.loading = false
+        })
     },
     getVehicles: function(event) {
       this.loading = true
       this.vehicles = []
       this.models = []
       this.vehicleData = null
-      axios.get(`https://fipeapi.appspot.com/api/1/carros/veiculos/${event.target.value}.json`).then(res => {
-        this.vehicles = res.data
-        this.vehicleId = event.target.value
-        this.loading = false
-      })
+      axios
+        .get(`https://fipeapi.appspot.com/api/1/carros/veiculos/${event.target.value}.json`)
+        .then(res => {
+          this.vehicles = res.data
+          this.vehicleId = event.target.value
+          this.loading = false
+        })
+        .catch(() => {
+          this.error = true
+          this.loading = false
+        })
     },
     getModels: function(event) {
       this.loading = true
@@ -94,6 +113,10 @@ export default {
           this.modelId = event.target.value
           this.loading = false
         })
+        .catch(() => {
+          this.error = true
+          this.loading = false
+        })
     },
     getVehicleData: function(event) {
       this.loading = true
@@ -104,6 +127,10 @@ export default {
         )
         .then(res => {
           this.vehicleData = res.data
+          this.loading = false
+        })
+        .catch(() => {
+          this.error = true
           this.loading = false
         })
     }

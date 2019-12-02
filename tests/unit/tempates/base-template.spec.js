@@ -1,6 +1,7 @@
 import { shallowMount } from '@vue/test-utils'
 import BaseTemplate from '@/components/templates/BaseTemplate'
 import PageHeader from '@/components/organisms/PageHeader'
+import PageFooter from '@/components/organisms/PageFooter'
 
 const title = ''
 
@@ -16,6 +17,10 @@ describe('BaseTemplate.vue', () => {
 
   it('has page-header child component', () => {
     expect(wrapper.find(PageHeader).exists()).toBe(true)
+  })
+
+  it('has page-footer child component', () => {
+    expect(wrapper.find(PageFooter).exists()).toBe(true)
   })
 
   it('has a h1 tag with title value', () => {
