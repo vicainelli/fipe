@@ -8,6 +8,8 @@
 - [Axios](https://jestjs.io/) for http requests
 - [Tailwind CSS](https://tailwindcss.com/), a utility-first CSS framework
 
+The wireframe and UI was built on [Figma](https://www.figma.com/file/nqCJ3onuNKHf9I9JiGdC6a/volanty?node-id=0%3A1).
+
 ### Project setup
 ```
 yarn install
