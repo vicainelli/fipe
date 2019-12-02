@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full fixed bottom-0 left-0">
+  <div class="w-full fixed bottom-0 left-0 bg-gray-200 border-t border-gray-300">
     <p class="py-3 px-2 text-center text-sm md:text-lg text-gray-500">
       By
       <a class="border-b text-gray-700" href="https://cainelli.dev" target="_blank" alt="Vinicius Cainelli website"
