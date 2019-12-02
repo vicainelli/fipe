@@ -1,6 +1,9 @@
 <template>
-  <div>
-    <slot>{{ content.msg }}</slot>
+  <div
+    class="p-3 bg-gray-300 border border-gray-400 rounded"
+    :class="messageType == 'error' ? 'bg-orange-200 border-yellow-700 text-yellow-800' : ''"
+  >
+    <slot></slot>
   </div>
 </template>
 
@@ -8,8 +11,8 @@
 export default {
   name: 'flash-message',
   props: {
-    content: {
-      type: Object,
+    messageType: {
+      type: String,
       default: undefined
     }
   }

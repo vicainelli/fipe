@@ -9,7 +9,10 @@ const content = {
 describe('FlashMessage.vue', () => {
   const wrapper = shallowMount(FlashMessage, {
     propsData: {
-      content
+      messageType: content.type
+    },
+    slots: {
+      default: content.msg
     }
   })
   it('has flash-message component', () => {
