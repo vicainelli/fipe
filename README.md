@@ -1,5 +1,7 @@
 # Frontend Challenge - Volanty
 
+<div style="text-align:center"><img width="540" alt="Screenshopt App" src="https://user-images.githubusercontent.com/1155694/69978285-f4d9eb80-150a-11ea-8af9-e46e5d957a38.png"></div>
+
 ## Stack
 [VueJS](https://vuejs.org/) for base of stack and components
 - [Jest](https://github.com/axios/axios) for unit tests
