@@ -79,6 +79,7 @@ export default {
         .then(res => {
           this.brands = res.data
           this.loading = false
+          this.error = false
         })
         .catch(() => {
           this.error = true
@@ -96,6 +97,7 @@ export default {
           this.vehicles = res.data
           this.vehicleId = event.target.value
           this.loading = false
+          this.error = false
         })
         .catch(() => {
           this.error = true
@@ -112,6 +114,7 @@ export default {
           this.models = res.data
           this.modelId = event.target.value
           this.loading = false
+          this.error = false
         })
         .catch(() => {
           this.error = true
@@ -128,6 +131,7 @@ export default {
         .then(res => {
           this.vehicleData = res.data
           this.loading = false
+          this.error = false
         })
         .catch(() => {
           this.error = true
