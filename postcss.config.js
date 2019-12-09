@@ -9,11 +9,15 @@ module.exports = {
       add: true,
       grid: true
     }),
-    // * Only add purgecss in production
-    process.env.NODE_ENV === 'production'
-      ? purgecss({
-          content: ['./src/**/*.html', './src/**/*.vue']
-        })
-      : ''
+    purgecss({
+      content: [
+        {
+          raw: '<html><body><div class="app"></div></body></html>',
+          extension: 'html'
+        },
+        './src/**/*.html',
+        './src/**/*.vue'
+      ]
+    })
   ]
 }
